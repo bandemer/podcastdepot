@@ -24,7 +24,7 @@ $_SESSION['token'] = $token;
         <div class="form-group row">
             <label for="nachricht" class="col-sm-3 col-form-label">Deine Nachricht:</label>
             <div class="col-sm-9">
-                <textarea class="form-control" id="nachricht" name="nachricht" rows="10"  placeholder="Deine Nachricht an Pascal" required></textarea>
+                <textarea class="form-control" id="nachricht" name="nachricht" rows="5"  placeholder="Deine Nachricht an Pascal" required></textarea>
             </div>
         </div>
         <div class="form-group row">
