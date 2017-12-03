@@ -1,6 +1,6 @@
 <?php
 /*
- *
+ * Startseite mit Funktion zum Versenden von Nachrichten
  *
  */
 @session_start();
@@ -23,12 +23,12 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
         $error[] = 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.';
     }
 
-    //E-Mail überprüfen
+    //E-Mail-Adresse überprüfen
     if ($email == false) {
         $error[] = 'Die angegebene E-Mail-Adresse ist nicht gültig.';
     }
 
-
+    //Fehlermeldung ausgeben
     if (count($error) > 0) {
         $output = '<div class="alert alert-danger alert-dismissible fade show mx-lg-5 my-lg-3" role="alert">
 <strong>Fehler!</strong> '.implode(' ', $error).
@@ -36,7 +36,7 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
 <span aria-hidden="true">&times;</span>
 </button>
 </div>';
-
+    //Wenn alles in Ordnung, Nachricht versenden
     } else {
         $message =
             "Folgende Nachricht ist über das Kontaktformular eingegangen:\n\n".

@@ -10,6 +10,7 @@
     text-align: center;
     background-color: transparent;
     margin-bottom:0;
+    padding-bottom:2rem;
 }
 .jumbotron .btn {
     padding: 14px 24px;
@@ -17,13 +18,20 @@
 }
 h1 {
     display:block;
-    width:500px;
-    height:210px;
+    width:350px;
+    height:147px;
     text-indent:-9999px;    
     background-image:url('assets/podcast-depot-logo.png');
-    background-size:500px 210px;
+    background-size:350px 147px;
     background-position:top left;
     margin:0 auto 1em auto;    
+}
+@media (min-width: 576px) {
+    h1 {
+        width:500px;
+        height:210px;
+        background-size:500px 210px;
+    }
 }
 h2 {
     text-align:center;
