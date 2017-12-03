@@ -18,13 +18,20 @@
 }
 h1 {
     display:block;
-    width:350px;
-    height:147px;
+    width:250px;
+    height:105px;
     text-indent:-9999px;    
     background-image:url('assets/podcast-depot-logo.png');
-    background-size:350px 147px;
+    background-size:250px 105px;
     background-position:top left;
     margin:0 auto 1em auto;    
+}
+@media (min-width: 400px) {
+    h1 {
+        width:350px;
+        height:147px;
+        background-size:350px 147px;
+    }
 }
 @media (min-width: 576px) {
     h1 {
