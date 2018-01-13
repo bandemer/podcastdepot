@@ -1,16 +1,13 @@
 .footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-    border-top: 1px solid #e0e0e0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
     background-color: transparent;
     margin-bottom:0;
-    padding-bottom:2rem;
+    padding:2rem;
 }
 .jumbotron .btn {
     padding: 14px 24px;
@@ -24,7 +21,7 @@ h1 {
     background-image:url('assets/podcast-depot-logo.png');
     background-size:250px 105px;
     background-position:top left;
-    margin:0 auto 1em auto;    
+    margin:0 auto 1.7rem auto;    
 }
 @media (min-width: 400px) {
     h1 {
@@ -45,8 +42,7 @@ h2 {
     font-weight:normal;
     font-size:1.7rem;
     padding:0 0 1rem 0;
-    margin-bottom:2rem;
-    border-bottom: 1px solid #E0E0E0;
+    margin-bottom:0.5rem;
 }
 h3 {
     font-size:1.5rem;
@@ -62,4 +58,3 @@ h3 {
     border-color:#000000;
     color:#000000;
 }
-

@@ -64,9 +64,9 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>PodcastDepot - Podcasts von und mit Pascal Dupré</title>
 <meta name="description" content="Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?date=<?php echo date('YmdHis', filemtime('style.css')); ?>">
 </head>
 <body>
 <div class="container">
@@ -85,20 +85,37 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4">
-            <h3>KleinesGespräch</h3>
-            <p>“KleinesGespräch” ist eine lockere und zwanglose Unterhaltung. Dabei kommt man oft vom Hölzchen aufs Stöckchen und verquatscht sich ein wenig – “KleinesGespräch” liegt damit fernab vom Standard-Interviewformat.</p>
-            <p><a class="btn btn-secondary" href="https://kleinesgespraech.de" role="button"><i class="fa fa-podcast"></i> kleinesgespraech.de</a></p>
+        <div class="col-lg-4 my-2">
+            <div class="card">
+                <img class="card-img-top" src="assets/kleinesgespraech-logo.png" alt="KleinesGespräch Logo">
+                <div class="card-body text-center">
+                    <h3 class="card-title">KleinesGespräch</h3>
+                    <p>“KleinesGespräch” ist eine lockere und zwanglose Unterhaltung. Dabei kommt man oft vom Hölzchen aufs Stöckchen und verquatscht sich ein wenig – “KleinesGespräch” liegt damit fernab vom Standard-Interviewformat.</p>
+                    <a class="btn btn-secondary my-3" href="https://kleinesgespraech.de" role="button"><i class="fa fa-podcast"></i> kleinesgespraech.de</a>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-            <h3>ThematischFrisch</h3>
-            <p>Ursprünglich im Jahr 2016 als “KleinesGespräch Thema” gestartet, hat sich dieser Podcast inzwischen zu einem eigenen Format entwickelt. Pascal bespricht dabei regelmäßig mit fachkundigen Gästen ein aktuelles Thema. </p>
-            <p><a class="btn btn-secondary" href="https://thematischfrisch.de" role="button"><i class="fa fa-podcast"></i> thematischfrisch.de</a></p>
+
+        <div class="col-lg-4 my-2">
+            <div class="card">
+                <img class="card-img-top" src="assets/thematischfrisch-logo.png" alt="ThematischFrisch Logo">
+                <div class="card-body text-center">
+                    <h3 class="card-title">ThematischFrisch</h3>
+                    <p>Ursprünglich im Jahr 2016 als “KleinesGespräch Thema” gestartet, hat sich dieser Podcast inzwischen zu einem eigenen Format entwickelt. Pascal bespricht dabei regelmäßig mit fachkundigen Gästen ein aktuelles Thema. </p>
+                    <a class="btn btn-secondary my-3" href="https://thematischfrisch.de" role="button"><i class="fa fa-podcast"></i> thematischfrisch.de</a>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-            <h3>KleinerMonolog</h3>
-            <p>In diesem Podcast spricht Pascal über seine aktuellen Erlebnisse und persönlichen Gefühle und Gedanken.</p>
-            <p><a class="btn btn-secondary" href="https://kleinermonolog.de" role="button"><i class="fa fa-podcast"></i> kleinermonolog.de</a></p>
+
+        <div class="col-lg-4 my-2">
+            <div class="card">
+                <img class="card-img-top" src="assets/kleinermonolog-logo.png" alt="KleinerMonolog Logo">
+                <div class="card-body text-center">
+                    <h3 class="card-title">KleinerMonolog</h3>
+                    <p>In diesem Podcast spricht Pascal über seine aktuellen Erlebnisse und persönlichen Gefühle und Gedanken. Neue Episoden entstehen dabei eher spontan, Gäste und regelmäßige Veröffentlichung gibt es hier nicht.</p>
+                    <a class="btn btn-secondary my-3" href="https://kleinermonolog.de" role="button"><i class="fa fa-podcast"></i> kleinermonolog.de</a>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -116,9 +133,9 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <script type="text/javascript">
 $('body').on('click', '[data-toggle="modal"]', function(){
     $($(this).data("target")+' .modal-content').load($(this).data("remote"));

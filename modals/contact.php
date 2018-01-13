@@ -5,7 +5,7 @@ $token = md5(uniqid(rand(), true));
 $_SESSION['token'] = $token;
 
 
-?><div class="modal-header bg-light">
+?><div class="modal-header bg-light pl-4">
     <h4 class="modal-title" id="dialoglabel">Kontaktformular</h4>
     <button class="close" type="button" data-dismiss="modal" aria-label="Schließen">
         <span aria-hidden="true">×</span>
