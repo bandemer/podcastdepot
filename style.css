@@ -2,7 +2,6 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-/* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -58,6 +57,6 @@ h3 {
     border-color:#000000;
     color:#000000;
 }
-.card-image-top {
+.card-img-top {
     height:100%;
 }
