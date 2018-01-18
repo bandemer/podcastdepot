@@ -64,8 +64,8 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>PodcastDepot - Podcasts von und mit Pascal Dupré</title>
 <meta name="description" content="Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/font-awesome.min.css">
+<link rel="stylesheet" href="assets/bootstrap.css">
 <link rel="stylesheet" href="style.css?date=<?php echo date('YmdHis', filemtime('style.css')); ?>">
 </head>
 <body>
