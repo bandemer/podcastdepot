@@ -12,9 +12,7 @@ class RoboFile extends \Robo\Tasks
     {
         $this->say("Git pull");
 
-        $this->taskGitStack()
-            ->pull()
-            ->run();
+        $this->_exec('GIT_SSH_COMMAND="ssh -i /var/www/clients/client1/podcastdepot.de/.ssh/podcastdepot-timmeserver" git pull');
 
         $this->say("CSS erzeugen");
         $this->taskScss(['scss/bootstrap.scss' => 'assets/bootstrap.css'])
