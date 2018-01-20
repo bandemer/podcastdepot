@@ -3,11 +3,15 @@
  * Tasks für robo.li
  *
  */
+
 require_once 'vendor/autoload.php';
 
 class RoboFile extends \Robo\Tasks
 {
 
+    /**
+     * Deploy auf podcastdepot.de Live-Server
+     */
     public function deploy()
     {
         $this->say("Git pull");
@@ -20,6 +24,9 @@ class RoboFile extends \Robo\Tasks
             ->run();
     }
 
+    /**
+     * Build auf Dev-Server
+     */
     public function build()
     {
         $this->say("CSS erzeugen");
