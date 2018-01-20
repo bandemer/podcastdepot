@@ -62,7 +62,7 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>1PodcastDepot - Podcasts von und mit Pascal Dupré</title>
+<title>PodcastDepot - Podcasts von und mit Pascal Dupré</title>
 <meta name="description" content="Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.">
 <link rel="stylesheet" href="assets/font-awesome.min.css">
 <link rel="stylesheet" href="assets/bootstrap.css">
