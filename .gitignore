@@ -2,7 +2,19 @@
 .project
 .settings
 config.php
+.sass-cache/
 assets/
-vendor/
 *.phar
 *.sh
+
+###> symfony/framework-bundle ###
+.env*
+/public/bundles/
+/public/assets/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+.web-server-pid
+###< symfony/web-server-bundle ###

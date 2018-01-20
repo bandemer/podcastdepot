@@ -1,11 +1,11 @@
 <?php
+
+require_once 'vendor/autoload.php';
+
 /**
  * Tasks für robo.li
  *
  */
-
-require_once 'vendor/autoload.php';
-
 class RoboFile extends \Robo\Tasks
 {
 
@@ -18,10 +18,7 @@ class RoboFile extends \Robo\Tasks
 
         $this->_exec('GIT_SSH_COMMAND="ssh -i /var/www/clients/client1/podcastdepot.de/.ssh/podcastdepot-timmeserver" git pull');
 
-        $this->say("CSS erzeugen");
-        $this->taskScss(['scss/bootstrap.scss' => 'assets/bootstrap.css'])
-            ->importDir('scss')
-            ->run();
+        $this->build();
     }
 
     /**
@@ -29,15 +26,27 @@ class RoboFile extends \Robo\Tasks
      */
     public function build()
     {
-        $this->say("CSS erzeugen");
+        $this->say('SCSS kompilieren');
 
-        $this->taskScss(['scss/bootstrap.scss' => 'assets/bootstrap.css'])
+        $this->taskScss([
+            'scss/bootstrap-reboot.scss' => 'public/assets/bootstrap-reboot.css',
+            'scss/bootstrap-grid.scss' => 'public/assets/bootstrap-grid.css',
+            'scss/bootstrap.scss' => 'public/assets/bootstrap.css'])
             ->importDir('scss')
+            ->run();
+
+        $this->say('podcastdepot.css erzeugen');
+
+        $this->taskConcat(array(
+            'public/assets/bootstrap-reboot.css',
+            'public/assets/bootstrap-grid.css',
+            'public/assets/bootstrap.css'))
+            ->to('public/assets/podcastdepot.css')
             ->run();
     }
 
     /**
-     *
+     * Watch auf scss Verzeichnis
      */
     public function watch()
     {
