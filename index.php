@@ -65,18 +65,17 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
 <title>PodcastDepot - Podcasts von und mit Pascal Dupré</title>
 <meta name="description" content="Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.">
 <link rel="stylesheet" href="assets/font-awesome.min.css">
-<link rel="stylesheet" href="assets/bootstrap.css">
-<link rel="stylesheet" href="style.css?date=<?php echo date('YmdHis', filemtime('style.css')); ?>">
+<link rel="stylesheet" href="assets/bootstrap.css?date=<?php echo date('YmdHis', filemtime('assets/bootstrap.css')); ?>">
 </head>
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1>PodcastDepot</h1>
+        <h1 class="text-hide">PodcastDepot</h1>
         <p class="lead">Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.</p>
         <?php echo $output; ?>
         <p>
-            <a class="btn btn-lg btn-primary m-2" href="https://kleinesp.de" role="button">Mehr über Pascal</a>
-            <a class="btn btn-lg btn-primary m-2" href="#" role="button" data-toggle="modal" data-target="#dialog" data-remote="modals/contact.php"><i class="fa fa-envelope" aria-hidden="true"></i> Kontakt</a>
+            <a class="btn btn-lg btn-warning m-2" href="https://kleinesp.de" role="button">Mehr über Pascal</a>
+            <a class="btn btn-lg btn-warning m-2" href="#" role="button" data-toggle="modal" data-target="#dialog" data-remote="modals/contact.php"><i class="fa fa-envelope" aria-hidden="true"></i> Kontakt</a>
         </p>
     </div>
     <div class="row">
@@ -133,9 +132,9 @@ if (isset($_POST['nachricht']) AND isset($_POST['email']))
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript">
 $('body').on('click', '[data-toggle="modal"]', function(){
     $($(this).data("target")+' .modal-content').load($(this).data("remote"));

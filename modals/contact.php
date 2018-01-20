@@ -30,7 +30,7 @@ $_SESSION['token'] = $token;
         <div class="form-group row">
             <div class="col text-right">
                 <button class="btn btn-secondary m-2" data-dismiss="modal">Abbrechen</button>
-                <button type="submit" class="btn btn-primary m-2">Absenden</button>
+                <button type="submit" class="btn btn-warning m-2">Absenden</button>
             </div>
         </div>
     </form>

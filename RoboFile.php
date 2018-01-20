@@ -35,4 +35,15 @@ class RoboFile extends \Robo\Tasks
             ->importDir('scss')
             ->run();
     }
+
+    /**
+     *
+     */
+    public function watch()
+    {
+        $this->taskWatch()
+            ->monitor('scss', function() {
+                $this->build();
+            })->run();
+    }
 }

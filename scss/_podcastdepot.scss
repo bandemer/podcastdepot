@@ -2,34 +2,23 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
-    margin-bottom:0;
-    padding:2rem;
-}
-.jumbotron .btn {
-    padding: 14px 24px;
-    font-size: 21px;
-}
 h1 {
     display:block;
     width:250px;
     height:105px;
-    text-indent:-9999px;    
-    background-image:url('assets/podcast-depot-logo.png');
+    background-image:url('podcast-depot-logo.png');
     background-size:250px 105px;
     background-position:top left;
     margin:0 auto 1.7rem auto;    
 }
-@media (min-width: 400px) {
+@include media-breakpoint-up(sm) {
     h1 {
         width:350px;
         height:147px;
         background-size:350px 147px;
     }
 }
-@media (min-width: 576px) {
+@include media-breakpoint-up(md) {
     h1 {
         width:500px;
         height:210px;
@@ -46,16 +35,6 @@ h2 {
 h3 {
     font-size:1.5rem;
     margin-top:1rem;
-}
-.btn-primary {
-    background-color:rgba(251, 190, 72, 1);
-    border-color:#000000;
-    color:#000000;
-}
-.btn-primary:hover, .btn-primary:active {
-    background-color:rgba(251, 190, 72, 0.5);
-    border-color:#000000;
-    color:#000000;
 }
 .card-img-top {
     height:100%;

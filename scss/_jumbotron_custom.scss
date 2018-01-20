@@ -1,0 +1,18 @@
+.jumbotron {
+  text-align:center;
+  padding: $jumbotron-padding;
+  margin-bottom:0;
+  background-color: $jumbotron-bg;
+  @include border-radius($border-radius-lg);
+  
+  @include media-breakpoint-up(sm) {
+    padding: 2rem;    
+  }
+  
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-color: $black;
+  }
+}
+
