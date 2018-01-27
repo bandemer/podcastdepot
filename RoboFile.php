@@ -14,11 +14,14 @@ class RoboFile extends \Robo\Tasks
      */
     public function deploy()
     {
-        $this->say("Git pull");
-
+        $this->say('Git pull');
         $this->_exec('GIT_SSH_COMMAND="ssh -i /var/www/clients/client1/podcastdepot.de/.ssh/podcastdepot-timmeserver" git pull');
 
         $this->build();
+
+        $this->say('Cache löschen');
+        $this->_exec('php bin/console cache:clear --no-warmup -e prod');
+
     }
 
     /**
@@ -27,7 +30,6 @@ class RoboFile extends \Robo\Tasks
     public function build()
     {
         $this->say('SCSS kompilieren');
-
         $this->taskScss([
             'scss/bootstrap-reboot.scss' => 'public/assets/bootstrap-reboot.css',
             'scss/bootstrap-grid.scss' => 'public/assets/bootstrap-grid.css',
@@ -36,12 +38,16 @@ class RoboFile extends \Robo\Tasks
             ->run();
 
         $this->say('podcastdepot.css erzeugen');
-
         $this->taskConcat(array(
             'public/assets/bootstrap-reboot.css',
             'public/assets/bootstrap-grid.css',
             'public/assets/bootstrap.css'))
             ->to('public/assets/podcastdepot.css')
+            ->run();
+
+        $this->say('CSS minifizieren');
+        $this->taskMinify('public/assets/podcastdepot.css')
+            ->to('public/assets/podcastdepot.min.css')
             ->run();
     }
 

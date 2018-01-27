@@ -20,7 +20,7 @@ class IndexController extends Controller
         $notices = $session->getFlashBag()->get('notice', array());
         $errors = $session->getFlashBag()->get('error', array());
 
-        $timestamp = filemtime('assets/podcastdepot.css');
+        $timestamp = filemtime('assets/podcastdepot.min.css');
 
         return $this->render(
             'index.html.twig',
@@ -69,7 +69,8 @@ class IndexController extends Controller
     {
         //Konfiguration
         $config = array();
-        $config['recipients'] = array('pascal@podcastdepot.de');
+        //$config['recipients'] = array('pascal@podcastdepot.de');
+        $config['recipients'] = array('info@bandemer.net');
         $config['subject'] = 'Nachricht über Kontaktformular auf '.
             'podcastdepot.de';
 
