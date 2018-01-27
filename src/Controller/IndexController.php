@@ -69,8 +69,7 @@ class IndexController extends Controller
     {
         //Konfiguration
         $config = array();
-        //$config['recipients'] = array('pascal@podcastdepot.de');
-        $config['recipients'] = array('info@bandemer.net');
+        $config['recipients'] = array('pascal@podcastdepot.de');
         $config['subject'] = 'Nachricht über Kontaktformular auf '.
             'podcastdepot.de';
 
