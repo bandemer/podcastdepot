@@ -4,7 +4,6 @@
 
 {% block body %}
     
-<div class="container">
     <div class="jumbotron">
         <h1 class="text-hide">PodcastDepot</h1>
         {% for e in errors %}
@@ -24,10 +23,6 @@
             </div>
         {% endfor %}
         <p class="lead">Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP -  unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.</p>
-        <p>
-            <a class="btn btn-lg btn-warning m-2" href="https://kleinesp.de" role="button">Mehr über Pascal</a>
-            <a class="btn btn-lg btn-warning m-2" href="#" role="button" data-toggle="modal" data-target="#dialog" data-remote="/kontakt/"><i class="fa fa-envelope" aria-hidden="true"></i> Kontakt</a>
-        </p>
     </div>         
     <div class="row">
         <div class="col-12">
@@ -41,7 +36,16 @@
                 <div class="card-body text-center">
                     <h3 class="card-title">KleinesGespräch</h3>
                     <p>“KleinesGespräch” ist eine lockere und zwanglose Unterhaltung. Dabei kommt man oft vom Hölzchen aufs Stöckchen und verquatscht sich ein wenig – “KleinesGespräch” liegt damit fernab vom Standard-Interviewformat.</p>
-                    <a class="btn btn-secondary my-3" href="https://kleinesgespraech.de" role="button"><i class="fa fa-podcast"></i> kleinesgespraech.de</a>
+                    <div class="dropdown show my-3 mt-4">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="kgDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mehr erfahren
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="kgDropdownMenuLink">
+                            <a class="dropdown-item" href="https://kleinesgespraech.de" target="_blank" rel="noopener"><i class="fas fa-home" aria-hidden="true"> </i> KleinesGespräch Website</a>
+                            <a class="dropdown-item" href="https://kleinesgespraech.de/feed/feed-mp3/" target="_blank" rel="noopener"><i class="fas fa-rss" aria-hidden="true"> </i> Feed abonnieren</a>
+                            <a class="dropdown-item" href="https://itunes.apple.com/de/podcast/kleinesgespr%C3%A4ch/id1140602291?mt=2" target="_blank" rel="noopener"><i class="fas fa-podcast" aria-hidden="true"> </i> Auf itunes anhören</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,7 +56,16 @@
                 <div class="card-body text-center">
                     <h3 class="card-title">ThematischFrisch</h3>
                     <p>Ursprünglich im Jahr 2016 als “KleinesGespräch Thema” gestartet, hat sich dieser Podcast inzwischen zu einem eigenen Format entwickelt. Pascal bespricht dabei regelmäßig mit fachkundigen Gästen ein aktuelles Thema. </p>
-                    <a class="btn btn-secondary my-3" href="https://thematischfrisch.de" role="button"><i class="fa fa-podcast"></i> thematischfrisch.de</a>
+                    <div class="dropdown show my-3 mt-4">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="tfDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mehr erfahren
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="tfDropdownMenuLink">
+                            <a class="dropdown-item" href="https://thematischfrisch.de" target="_blank" rel="noopener"><i class="fas fa-home" aria-hidden="true"> </i> ThematischFrisch Website</a>
+                            <a class="dropdown-item" href="https://thematischfrisch.de/feed/mp3/" target="_blank" rel="noopener"><i class="fas fa-rss" aria-hidden="true"> </i> Feed abonnieren</a>
+                            <a class="dropdown-item" href="https://itunes.apple.com/de/podcast/thematischfrisch/id1287535506?mt=2" target="_blank" rel="noopener"><i class="fas fa-podcast" aria-hidden="true"> </i> Auf itunes anhören</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +76,16 @@
                 <div class="card-body text-center">
                     <h3 class="card-title">KleinerMonolog</h3>
                     <p>In diesem Podcast spricht Pascal über seine aktuellen Erlebnisse und persönlichen Gefühle und Gedanken. Neue Episoden entstehen dabei eher spontan, Gäste und regelmäßige Veröffentlichung gibt es hier nicht.</p>
-                    <a class="btn btn-secondary my-3" href="https://kleinermonolog.de" role="button"><i class="fa fa-podcast"></i> kleinermonolog.de</a>
+                    <div class="dropdown show my-3 mt-4">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="kmDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mehr erfahren
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="kmDropdownMenuLink">
+                            <a class="dropdown-item" href="https://kleinermonolog.de" target="_blank" rel="noopener"><i class="fas fa-home" aria-hidden="true"> </i> KleinerMonolog Website</a>
+                            <a class="dropdown-item" href="https://kleinermonolog.de/feed/mp3/" target="_blank" rel="noopener"><i class="fas fa-rss" aria-hidden="true"> </i> Feed abonnieren</a>
+                            <a class="dropdown-item" href="https://itunes.apple.com/de/podcast/kleinermonolog/id1287537124?mt=2" target="_blank" rel="noopener"><i class="fas fa-podcast" aria-hidden="true"> </i> Auf itunes anhören</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,7 +96,7 @@
             <div class="col-4 text-right"><a href="#" data-toggle="modal" data-target="#dialog" data-remote="/impressum/">Impressum</a></div>
         </div>
     </footer>
-</div>
+
 
 <!-- Modaler Dialog -->
 <div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="dialoglabel" aria-hidden="true">
@@ -90,6 +112,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script type="text/javascript">
 $('body').on('click', '[data-toggle="modal"]', function(){
     $($(this).data("target")+' .modal-content').load($(this).data("remote"));

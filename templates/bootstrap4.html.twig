@@ -9,9 +9,46 @@
 <link rel="stylesheet" href="assets/podcastdepot.css?date={{ csstime }}">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+    <div class="container">
+        <a class="navbar-brand ml-5" href="/">PodcastDepot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation ein- und ausblenden">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="https://www.patreon.com/KleinesP" title="KleinesP auf Patreon.com"><i class="fas fa-heart" aria-hidden="true"> </i> Pascal unterstützen</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="/kalender/" title="Termine, Termine, Termine..."><i class="fas fa-calendar" aria-hidden="true"> </i> Kalender</a>
+                </li>
+                <li class="nav-item dropdown mr-4">
+                    <a class="nav-link dropdown-toggle" href="#" title="Kontakt zum PodcastDepot" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-comment"> </i> Kontakt
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://discord.gg/Xy69Bj8" title="PodcastDepot-Community auf Discord" target="_blank" rel="noopener"><i class="fab fa-discord mr-1" aria-hidden="true"> </i> Discord</a>
+                        <a class="dropdown-item" href="https://twitter.com/podcastdepot" title="PodcastDepot auf Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square mr-1" aria-hidden="true"> </i> Twitter</a>
+                        <a class="dropdown-item" href="https://de-de.facebook.com/kleines.gespraech/" title="PodcastDepot auf Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square mr-1" aria-hidden="true"> </i> Facebook</a>
+                        <a class="dropdown-item" href="#" title="E-Mail an das PodcastDepot" data-toggle="modal" data-target="#dialog" data-remote="/kontakt/"><i class="fas fa-envelope mr-1" aria-hidden="true"> </i> Kontaktformular</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>        
+</nav>
+    
+<div class="container">
+
+    
+
 
 {% block body %}{% endblock %}
 
+
+</div>
 
 {% block javascripts %}{% endblock %}
 </body>
