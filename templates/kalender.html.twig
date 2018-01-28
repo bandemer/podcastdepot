@@ -1,0 +1,95 @@
+{% extends 'bootstrap4.html.twig' %}
+
+{% block header %}
+<link href='/assets/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+<link href='/assets/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<style>
+#loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+</style>
+{% endblock %}
+
+{% block title %}PodcastDepot Termine{% endblock %}
+
+{% block body %}
+    
+    <div class="row">
+        
+        <div class="col">
+            
+            <h2 class="my-4">PodcastDepot Kalender</h2>
+            
+        
+        
+            <div id="loading">loading...</div>
+            
+            <div id="calendar"> </div>
+        
+        </div>
+        
+        
+        
+    </div>
+    <footer class="footer">
+        <div class="row">
+            <div class="col-8">&copy; 2012 - {{ jahr }} Pascal Dupré</div>
+            <div class="col-4 text-right"><a href="#" data-toggle="modal" data-target="#dialog" data-remote="/impressum/">Impressum</a></div>
+        </div>
+    </footer>
+
+<!-- Modaler Dialog -->
+<div class="modal fade" id="dialog" tabindex="-1" role="dialog" aria-labelledby="dialoglabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content"></div>
+    </div>
+</div>
+    
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$('body').on('click', '[data-toggle="modal"]', function(){
+    $($(this).data("target")+' .modal-content').load($(this).data("remote"));
+});
+$('body').on('click', '#kontaktlink', function(){
+    $('#dialog .modal-content').load('/kontakt/');
+});
+</script>
+<script src='/assets/fullcalendar/lib/moment.min.js'></script>
+<script src='/assets/fullcalendar/fullcalendar.min.js'></script>
+<script src='/assets/fullcalendar/gcal.min.js'></script>
+<script src='/assets/fullcalendar/locale/de.js'></script>
+<script>
+$(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+
+        googleCalendarApiKey: 'AIzaSyC4oMm7cEGqwlKCRKnK8TX4cEooifjH8iE',
+
+        events: {
+            googleCalenderId: 'dnbibsital5ugiitl086o8r8u4@group.calendar.google.com',
+        },            
+
+        loading: function(bool) {
+            $('#loading').toggle(bool);
+        }
+
+    });
+});
+
+</script>
+{% endblock %}

@@ -37,7 +37,21 @@ class IndexController extends Controller
      */
     public function kalender()
     {
-        return new Response('<html><body>Kalender</body></html>');
+        $session = new Session();
+
+        $notices = $session->getFlashBag()->get('notice', array());
+        $errors = $session->getFlashBag()->get('error', array());
+
+        $timestamp = filemtime('assets/podcastdepot.min.css');
+
+        return $this->render(
+            'kalender.html.twig',
+            array(
+                'csstime' => date('YmdHis', $timestamp),
+                'jahr' => date('Y'),
+                'notices' => $notices,
+                'errors' => $errors
+            ));
     }
 
     /**
@@ -88,7 +102,8 @@ class IndexController extends Controller
             //Token überprüfen
             if (!$session->has('token') OR
                 $request->request->get('token') != $session->get('token')) {
-                $error[] = 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.';
+                $error[] = 'Ein Fehler ist aufgetreten. '.
+                    'Bitte versuche es erneut.';
             }
 
             //E-Mail-Adresse überprüfen
