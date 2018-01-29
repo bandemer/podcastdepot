@@ -31,18 +31,8 @@ class RoboFile extends \Robo\Tasks
     {
         $this->say('SCSS kompilieren');
         $this->taskScss([
-            'scss/bootstrap-reboot.scss' => 'public/assets/bootstrap-reboot.css',
-            'scss/bootstrap-grid.scss' => 'public/assets/bootstrap-grid.css',
-            'scss/bootstrap.scss' => 'public/assets/bootstrap.css'])
+            'scss/bootstrap.scss' => 'public/assets/podcastdepot.css'])
             ->importDir('scss')
-            ->run();
-
-        $this->say('podcastdepot.css erzeugen');
-        $this->taskConcat(array(
-            'public/assets/bootstrap-reboot.css',
-            'public/assets/bootstrap-grid.css',
-            'public/assets/bootstrap.css'))
-            ->to('public/assets/podcastdepot.css')
             ->run();
 
         $this->say('CSS minifizieren');
