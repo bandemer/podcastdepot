@@ -6,6 +6,8 @@ config.php
 assets/
 *.phar
 *.sh
+/public/*.ico
+/public/*.png
 
 ###> symfony/framework-bundle ###
 .env*
