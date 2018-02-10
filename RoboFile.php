@@ -51,4 +51,17 @@ class RoboFile extends \Robo\Tasks
                 $this->build();
             })->run();
     }
+
+    /**
+     * Watch auf scss Verzeichnis
+     */
+    public function watch2()
+    {
+        $this->taskWatch()
+        ->monitor('scss', function() {
+            $this->taskScss([
+                'scss/bootstrap.scss' => 'public/assets/podcastdepot.css'])
+                ->run();
+        })->run();
+    }
 }
