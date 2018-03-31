@@ -3,16 +3,17 @@
 .settings
 config.php
 .sass-cache/
-assets/
 *.phar
 *.sh
 /public/*.ico
 /public/*.png
+/feedcache/
 
 ###> symfony/framework-bundle ###
 .env*
 /public/bundles/
-/public/assets/
+/public/assets/*
+!/public/assets/podcastdepot-feed.rss
 /var/
 /vendor/
 ###< symfony/framework-bundle ###

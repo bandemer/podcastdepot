@@ -77,6 +77,56 @@ class IndexController extends Controller
     }
 
     /**
+     * @Route("/feed/")
+     */
+    public function feed()
+    {
+        if ($this->container->has('profiler')) {
+            $this->container->get('profiler')->disable();
+        }
+
+        $feed = new \DOMDocument();
+        $feed->load('assets/podcastdepot-feed.rss');
+
+        foreach ($feed->getElementsByTagName('lastBuildDate') AS $t) {
+            $t->nodeValue = date('r');
+        }
+
+
+        $feeds = [
+            'https://kleinesgespraech.de/feed/feed-mp3/',
+            'https://thematischfrisch.de/feed/mp3/',
+            'https://kleinermonolog.de/feed/mp3/',
+        ];
+
+
+
+        foreach ($feeds AS $f) {
+            $xml = file_get_contents($f);
+            $temp = new \DOMDocument();
+            $temp->loadXML($xml);
+
+            foreach ($temp->getElementsByTagName('item') AS $i) {
+                foreach ($feed->getElementsByTagName('channel') AS $c) {
+                    $i = $feed->importNode($i, true);
+                    $c->appendChild($i);
+                }
+            }
+        }
+
+        $response = new Response(
+            $feed->saveXML(),
+            Response::HTTP_OK,
+            ['content-type' => 'application/rss+xml']
+        );
+
+        $response->setCharset('UTF-8');
+
+        return($response);
+
+    }
+
+    /**
      * @Route("/senden/")
      */
     public function senden(Request $request)

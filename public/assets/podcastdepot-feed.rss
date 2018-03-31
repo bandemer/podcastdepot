@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:psc="http://podlove.org/simple-chapters" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:fh="http://purl.org/syndication/history/1.0">
+<channel>
+<title>PodcastDepot</title>
+<link>https://podcastdepot.de</link>
+<description>Podcasts von und mit Pascal Dupré</description>
+<lastBuildDate>Wed, 28 Mar 2018 01:22:18 +0000</lastBuildDate>
+<image>
+<url>https://podcastdepot.de/assets/podcastdepot-logo-2800x2800.png</url>
+<title>PodcastDepot</title>
+<link>https://podcastdepot.de</link>
+</image>
+<atom:link rel="self" type="application/rss+xml" title="PodcastDepot Feed" href="https://podcastdepot.de/feed/" />
+<atom:link rel="first" href="https://podcastdepot.de/feed/" />
+<language>de-DE</language>
+<itunes:author>Pascal Dupré</itunes:author>
+<itunes:summary>Unter dem Namen PodcastDepot produziert und veröffentlicht Pascal Dupré - besser bekannt als KleinesP - unterschiedliche Podcast-Formate. Dabei sind alle Episoden frei und kostenlos im Internet verfügbar.</itunes:summary>
+<itunes:category text="Society &amp; Culture"></itunes:category>
+<itunes:category text="Philosophy"></itunes:category>
+<itunes:category text="Comedy"></itunes:category>
+<itunes:owner>
+    <itunes:name>Pascal Dupré</itunes:name>
+	<itunes:email>d.pascal92@gmail.com</itunes:email>
+</itunes:owner>
+<itunes:image href="https://podcastdepot.de/assets/podcastdepot-logo-2800x2800.png" />
+<itunes:subtitle>Podcasts von und mit Pascal Dupré</itunes:subtitle>
+<itunes:block>no</itunes:block>
+<itunes:explicit>yes</itunes:explicit>
+		
+</channel>
+</rss>
