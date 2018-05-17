@@ -75,7 +75,19 @@ $('body').on('click', '#kontaktlink', function(){
 $(document).ready(function() {
 
     $('#calendar').fullCalendar({
+    
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'listyear,month'
+          },
 
+        views: {
+            listyear: { buttonText: 'list year' }
+      },
+        
+        navLinks: true, // can click day/week names to navigate views
+      
         googleCalendarApiKey: 'AIzaSyARRqOZ-pfbu_HblVugJdDw21mPGWZijR0',
 
         events: 'c9uuvvl03c9q3f1ef6a15lt3m4@group.calendar.google.com',
