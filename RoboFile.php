@@ -17,11 +17,13 @@ class RoboFile extends \Robo\Tasks
         $this->say('Git pull');
         $this->_exec('GIT_SSH_COMMAND="ssh -i /var/www/clients/client1/podcastdepot.de/.ssh/podcastdepot-timmeserver" git pull');
 
+        $this->say('composer install');
+        $this->_exec('composer install');
+
         $this->build();
 
         $this->say('Cache löschen');
         $this->_exec('php bin/console cache:clear --no-warmup -e prod');
-
     }
 
     /**
