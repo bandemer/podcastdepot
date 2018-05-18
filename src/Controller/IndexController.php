@@ -62,6 +62,15 @@ class IndexController extends Controller
         return $this->render('impressum.html.twig');
     }
 
+
+    /**
+     * @Route("/datenschutz/")
+     */
+    public function datenschutz()
+    {
+        return $this->render('datenschutz.html.twig');
+    }
+
     /**
      * @Route("/kontakt/")
      */

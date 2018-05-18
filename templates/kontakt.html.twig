@@ -9,6 +9,14 @@
     <p>Wenn Du Pascal eine Nachricht senden möchtest, fülle bitte das folgende Formular aus:</p>
     <form method="post" action="/senden/">
         <input type="hidden" name="token" value="{{ token }}">
+        <div class="form-group row py-2">
+            <p class="alert alert-warning alert-dismissible text-center w-100 fade show" role="alert">
+                Bitte beachte unsere <a href="#" class="alert-link" id="datenschutzlink">Hinweise zum Datenschutz</a>!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Schließen">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </p>            
+        </div>
         <div class="form-group row">
             <label for="inputemail" class="col-sm-3 col-form-label">Deine E-Mail:</label>
             <div class="col-sm-9">
@@ -21,7 +29,9 @@
                 <textarea class="form-control" id="nachricht" name="nachricht" rows="5" placeholder="Deine Nachricht an Pascal" required></textarea>
             </div>
         </div>
+        
         <div class="form-group row">
+            
             <div class="col text-right">
                 <button class="btn btn-secondary m-2" data-dismiss="modal">Abbrechen</button>
                 <button type="submit" class="btn btn-warning m-2">Senden</button>

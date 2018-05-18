@@ -41,7 +41,9 @@
     <footer class="footer">
         <div class="row">
             <div class="col-8">&copy; 2012 - {{ jahr }} Pascal Dupré</div>
-            <div class="col-4 text-right"><a href="#" data-toggle="modal" data-target="#dialog" data-remote="/impressum/">Impressum</a></div>
+            <div class="col-4 text-right">
+                <a href="#" data-toggle="modal" data-target="#dialog" data-remote="/impressum/">Impressum</a> | <a href="#" data-toggle="modal" data-target="#dialog" data-remote="/datenschutz/">Datenschutz</a>
+            </div>
         </div>
     </footer>
 
@@ -65,6 +67,12 @@ $('body').on('click', '[data-toggle="modal"]', function(){
 });
 $('body').on('click', '#kontaktlink', function(){
     $('#dialog .modal-content').load('/kontakt/');
+});
+$('body').on('click', '#datenschutzlink', function(){
+    $('#dialog .modal-content').load('/datenschutz/');
+});
+$('body').on('click', '#impressumlink', function(){
+    $('#dialog .modal-content').load('/impressum/');
 });
 </script>
 <script src='/assets/fullcalendar/lib/moment.min.js'></script>
