@@ -101,14 +101,11 @@ class IndexController extends Controller
             $t->nodeValue = date('r');
         }
 
-
         $feeds = [
             'https://kleinesgespraech.de/feed/feed-mp3/',
             'https://thematischfrisch.de/feed/mp3/',
-            'https://kleinermonolog.de/feed/mp3/',
+            'https://kommune-vierzwei.de/feed/mp3/',
         ];
-
-
 
         foreach ($feeds AS $f) {
             $xml = file_get_contents($f);
