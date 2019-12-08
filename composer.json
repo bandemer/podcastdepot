@@ -15,7 +15,7 @@
         "symfony/yaml": "^4.0",
         "twbs/bootstrap": ">=4.0.0",
         "patchwork/jsqueeze": "~1.0",
-        "natxet/CssMin": "~3.0"
+        "natxet/cssmin": "~3.0"
     },
     "require-dev": {
         "symfony/dotenv": "^4.0",
