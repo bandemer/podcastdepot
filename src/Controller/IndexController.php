@@ -53,6 +53,7 @@ class IndexController extends AbstractController
      */
     public function kontakt()
     {
+        /*
         $token = md5(uniqid(rand(), true));
 
         $session = new Session();
@@ -60,6 +61,8 @@ class IndexController extends AbstractController
 
         return $this->render('kontakt.html.twig',
             array('token' => $token));
+        */
+        return $this->redirectToRoute('startseite');
     }
 
     /**
@@ -114,6 +117,7 @@ class IndexController extends AbstractController
      */
     public function senden(Request $request)
     {
+        /*
         //Konfiguration
         $config = array();
         $config['recipients'] = array('pascal@podcastdepot.de');
@@ -169,7 +173,7 @@ class IndexController extends AbstractController
                 $session->set('token', '');
             }
         }
-
+        */
         return $this->redirectToRoute('startseite');
     }
 
